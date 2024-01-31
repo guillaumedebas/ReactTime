@@ -1,13 +1,11 @@
-import './App.css'
+import React from 'react';
+import ClockDisplay from './components/ClockDisplay/ClockDiplay';
 
-function App() {
 
+const App: React.FC = () => {
+    return (
+        <ClockDisplay />
+    );
+};
 
-  return (
-    <>
-     
-    </>
-  )
-}
-
-export default App
+export default App;
