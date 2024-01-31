@@ -1,9 +1,11 @@
 import React from 'react';
 import { Typography, Grid } from '@mui/material';
 import useClock from '../../hooks/useClock/useClock';
+import { useTheme } from '@mui/material/styles';
 
 const ClockDisplay: React.FC = () => {
     const formattedTime = useClock();
+    const theme = useTheme(); // Accéder au thème
 
     return (
         <Grid
@@ -12,12 +14,12 @@ const ClockDisplay: React.FC = () => {
             alignItems="center"
             sx={{
                 height: '100vh',
-                backgroundColor: 'black'
+                backgroundColor: theme.palette.background.default
             }}>
             <Grid item>
                 <Typography
                     component="p"
-                    color="blue"
+                    color="primary"
                     sx={{
                         fontSize: 'clamp(2rem, 20vw, 20rem)'
                     }}>
@@ -29,5 +31,3 @@ const ClockDisplay: React.FC = () => {
 };
 
 export default ClockDisplay;
-
-
