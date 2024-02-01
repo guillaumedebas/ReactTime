@@ -1,15 +1,13 @@
-// src/theme.ts
+// theme.ts
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#0064ff',
-        },
-        background: {
-            default: '#000000',
-        },
+export const getTheme = (primaryColor: string, backgroundColor: string) => createTheme({
+  palette: {
+    primary: {
+      main: primaryColor,
     },
+    background: {
+      default: backgroundColor,
+    },
+  },
 });
-
-export default theme;

@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 
 const ClockDisplay: React.FC = () => {
     const formattedTime = useClock();
-    const theme = useTheme(); // Accéder au thème
+    const theme = useTheme(); 
 
     return (
         <Grid
@@ -13,7 +13,7 @@ const ClockDisplay: React.FC = () => {
             justifyContent="center"
             alignItems="center"
             sx={{
-                height: '100vh',
+               
                 backgroundColor: theme.palette.background.default
             }}>
             <Grid item>
