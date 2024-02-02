@@ -13,7 +13,7 @@ const ClockDisplay: React.FC = () => {
             justifyContent="center"
             alignItems="center"
             sx={{
-               
+                height: '100vh',
                 backgroundColor: theme.palette.background.default
             }}>
             <Grid item>
