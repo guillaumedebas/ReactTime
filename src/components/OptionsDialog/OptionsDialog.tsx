@@ -4,6 +4,7 @@ import { useThemeContext } from '../../ThemeContext';
 import { ColorPicker } from '../ColorPicker/ColorPicker';
 import { DialogHeader } from '../DialogHeader/DialogHeader';
 import { ThemeCustomizationButton } from '../ThemeCustomizationButton/ThemeCustomizationButton';
+import ShowSecondsToggle from '../ShowSecondsToggle/ShowSecondsToggle'; // Importez le nouveau composant
 
 export default function OptionsDialog() {
     const [open, setOpen] = useState(false);
@@ -14,19 +15,20 @@ export default function OptionsDialog() {
     const handleClose = () => setOpen(false);
 
     return (
-        <Box 
-        sx={{ 
-            display: 'flex', 
-            justifyContent: 'flex-end',
-            bgcolor: theme.palette.background.default,
-            color: theme.palette.primary.main
+        <Box
+            sx={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+                bgcolor: theme.palette.background.default,
+                color: theme.palette.primary.main
             }}>
             <ThemeCustomizationButton onClick={handleClickOpen} />
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogHeader title="Customize Theme Colors" onClose={handleClose} />
+                <DialogHeader title="Configurations" onClose={handleClose} />
                 <DialogContent dividers>
                     <ColorPicker initialColor={primaryColor} label="Primary Color" onChange={setPrimaryColor} />
                     <ColorPicker initialColor={backgroundColor} label="Background Color" onChange={setBackgroundColor} />
+                    <ShowSecondsToggle /> {/* Utilisation du nouveau composant */}
                 </DialogContent>
             </Dialog>
         </Box>

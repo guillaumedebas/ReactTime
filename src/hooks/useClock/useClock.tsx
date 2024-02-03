@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-// Le hook useClock retourne une chaîne de caractères représentant l'heure formatée
-const useClock = (): string => {
+
+const useClock = (showSeconds = true): string => {
     const [currentTime, setCurrentTime] = useState<Date>(new Date());
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const useClock = (): string => {
     const formattedTime: string = currentTime.toLocaleTimeString('fr-FR', {
         hour: '2-digit',
         minute: '2-digit',
-        second: '2-digit',
+        second: showSeconds ? '2-digit' : undefined,
         hour12: false
     });
 

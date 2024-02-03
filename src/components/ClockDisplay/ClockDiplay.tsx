@@ -2,9 +2,11 @@ import React from 'react';
 import { Typography, Grid } from '@mui/material';
 import useClock from '../../hooks/useClock/useClock';
 import { useTheme } from '@mui/material/styles';
+import { useThemeContext } from '../../ThemeContext';
 
 const ClockDisplay: React.FC = () => {
-    const formattedTime = useClock();
+    const { showSeconds } = useThemeContext();
+    const formattedTime = useClock(showSeconds);
     const theme = useTheme(); 
 
     return (
