@@ -1,12 +1,13 @@
 import React from 'react';
 import { Typography, Grid } from '@mui/material';
-import useClock from '../../hooks/useClock/useClock';
 import { useTheme } from '@mui/material/styles';
-import { useThemeContext } from '../../ThemeContext';
 
-const ClockDisplay: React.FC = () => {
-    const { showSeconds } = useThemeContext();
-    const formattedTime = useClock(showSeconds);
+interface CustomDisplayProps {
+    formattedValue: string;
+    fontSize?: string;
+}
+
+const CustomDisplay: React.FC<CustomDisplayProps> = ({ formattedValue, fontSize = 'clamp(2rem, 20vw, 20rem)' }) => {
     const theme = useTheme(); 
 
     return (
@@ -15,7 +16,7 @@ const ClockDisplay: React.FC = () => {
             justifyContent="center"
             alignItems="center"
             sx={{
-                height: '100vh',
+                
                 width: '100vw',
                 backgroundColor: theme.palette.background.default
             }}>
@@ -24,13 +25,13 @@ const ClockDisplay: React.FC = () => {
                     component="p"
                     color="primary"
                     sx={{
-                        fontSize: 'clamp(2rem, 20vw, 20rem)'
+                        fontSize: fontSize
                     }}>
-                    {formattedTime}
+                    {formattedValue}
                 </Typography>
             </Grid>
         </Grid>
     );
 };
 
-export default ClockDisplay;
+export default CustomDisplay;
