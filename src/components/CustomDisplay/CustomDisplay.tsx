@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Grid } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+
 
 interface CustomDisplayProps {
     formattedValue: string;
@@ -8,19 +8,10 @@ interface CustomDisplayProps {
 }
 
 const CustomDisplay: React.FC<CustomDisplayProps> = ({ formattedValue, fontSize = 'clamp(2rem, 20vw, 20rem)' }) => {
-    const theme = useTheme(); 
+
 
     return (
-        <Grid
-            container
-            justifyContent="center"
-            alignItems="center"
-            sx={{
-                
-                width: '100vw',
-                backgroundColor: theme.palette.background.default
-            }}>
-            <Grid item>
+               <Grid item>
                 <Typography
                     component="p"
                     color="primary"
@@ -30,7 +21,6 @@ const CustomDisplay: React.FC<CustomDisplayProps> = ({ formattedValue, fontSize 
                     {formattedValue}
                 </Typography>
             </Grid>
-        </Grid>
     );
 };
 

@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Grid } from '@mui/material'
 import CustomDisplay from '../CustomDisplay/CustomDisplay';
 import useClock from '../../hooks/useClock/useClock';
 import { useThemeContext } from '../../ThemeContext';
@@ -9,10 +9,18 @@ function Display() {
     const formattedTime = useClock(showSeconds);
     const formattedDate = useDate();
     return (
-        <Box>
+        <Grid
+            container
+            direction="column"
+            wrap="nowrap"
+            justifyContent="center"
+            alignItems="center"
+            sx={{
+                height: '100vh',
+            }}>
             <CustomDisplay formattedValue={formattedTime} fontSize='clamp(2rem, 20vw, 20rem)' />
             <CustomDisplay formattedValue={formattedDate} fontSize='clamp(1rem, 10vw, 10rem)' />
-        </Box>
+        </Grid>
     )
 }
 

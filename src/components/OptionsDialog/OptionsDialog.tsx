@@ -28,7 +28,7 @@ export default function OptionsDialog() {
                 <DialogContent dividers>
                     <ColorPicker initialColor={primaryColor} label="Primary Color" onChange={setPrimaryColor} />
                     <ColorPicker initialColor={backgroundColor} label="Background Color" onChange={setBackgroundColor} />
-                    <ShowSecondsToggle /> {/* Utilisation du nouveau composant */}
+                    <ShowSecondsToggle /> 
                 </DialogContent>
             </Dialog>
         </Box>
