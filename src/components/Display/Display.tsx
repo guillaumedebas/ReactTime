@@ -18,8 +18,8 @@ function Display() {
             sx={{
                 height: '100vh',
             }}>
-            <CustomDisplay formattedValue={formattedTime} fontSize='clamp(2rem, 20vw, 20rem)' />
-            <CustomDisplay formattedValue={formattedDate} fontSize='clamp(1rem, 10vw, 10rem)' />
+            <CustomDisplay formattedValue={formattedTime} fontSize='clamp(1.5rem, 15vw, 15rem)' />
+            <CustomDisplay formattedValue={formattedDate} fontSize='clamp(0.7rem, 7vw, 7rem)' />
         </Grid>
     )
 }

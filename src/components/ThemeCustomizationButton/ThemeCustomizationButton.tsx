@@ -9,9 +9,13 @@ interface ThemeCustomizationButtonProps {
 export const ThemeCustomizationButton: React.FC<ThemeCustomizationButtonProps> = ({ onClick }) => {
     return (
         <Button
-            startIcon={<SettingsIcon />}
             onClick={onClick}
-            color="inherit">
+            color="inherit"
+            >
+            <SettingsIcon sx={{ 
+                fontSize: 'clamp(1.5rem, 3vw, 3rem)',
+                margin: 'clamp(0.1rem, 1vw, 1rem)'
+                 }}  />
         </Button>
     );
 };
