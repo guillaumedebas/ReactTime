@@ -17,7 +17,7 @@ function Display() {
             alignItems="center"
             sx={{
    
-                height: '90%',
+                height: '80%',
             }}>
             
             <CustomDisplay formattedValue={formattedTime} fontSize='clamp(1.5rem, 15vw, 15rem)' />
