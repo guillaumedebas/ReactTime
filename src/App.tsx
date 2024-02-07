@@ -20,7 +20,7 @@ const App: React.FC = () => {
             alignItems="center"
     sx={{
    
-                height: '90vh',
+                height: '80vh',
             }}>
       <OptionsDialog />
      <Display />
