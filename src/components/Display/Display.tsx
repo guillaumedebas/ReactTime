@@ -16,8 +16,10 @@ function Display() {
             justifyContent="center"
             alignItems="center"
             sx={{
-                height: '100vh',
+   
+                height: '90%',
             }}>
+            
             <CustomDisplay formattedValue={formattedTime} fontSize='clamp(1.5rem, 15vw, 15rem)' />
             <CustomDisplay formattedValue={formattedDate} fontSize='clamp(0.7rem, 7vw, 7rem)' />
         </Grid>

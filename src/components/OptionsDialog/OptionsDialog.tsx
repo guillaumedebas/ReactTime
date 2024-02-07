@@ -20,7 +20,8 @@ export default function OptionsDialog() {
                 display: 'flex',
                 justifyContent: 'flex-end',
                 bgcolor: theme.palette.background.default,
-                color: theme.palette.primary.main
+                color: theme.palette.primary.main,
+                height: '10%',
             }}>
             <ThemeCustomizationButton onClick={handleClickOpen} />
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
